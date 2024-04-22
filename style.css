@@ -1,0 +1,215 @@
+/* Start Global Rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ccc;
+}
+
+:root {
+  --main-color: rgb(0, 119, 255);
+  --main-transition: .3s;
+}
+/* End Global Rules  */
+
+.title {
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 700px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .form {
+  background-color: black;
+  border-radius: 6px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 0 10px white inset;
+}
+
+.container .form .input {
+  flex: 1;
+  max-width: 100%;
+  height: 55px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: #333;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+
+.container .form .input:hover {
+  background-color: #444;
+}
+
+.container .form .input:focus {
+  background-color: #eee;
+  /* box-shadow: 0 0 10px white; */
+}
+
+.container .form .add {
+  height: 55px;
+  padding: 8px 12px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.container .form .add:hover {
+  box-shadow: 0 0 7px #999;
+  background-color: #0068d8;
+}
+
+@media (max-width: 500px) {
+  .container .form {
+    flex-direction: column;
+  }
+  .container .form .input, 
+  .container .form .add {
+    width: 100%;
+  }
+}
+
+.container .tasks {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 6px;
+  padding: 25px;
+  box-shadow: 0 0 10px white inset;
+}
+
+.container .tasks .msg {
+  color: #eee;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container .tasks .task {
+  padding: 15px;
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.container .tasks .task:hover {
+  color: #ccc;
+}
+
+.container .tasks .task-done {
+  background-color: #222;
+  color: #999;
+}
+
+.container .tasks .task:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.container .tasks .task .text {
+  flex: 1;
+  text-align: left;
+  line-height: 1.3;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.container .tasks .task .delete {
+  margin-left: auto;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: rgb(255, 8, 0);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--main-transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.container .tasks .task .delete:hover,
+.container .delete-all:hover {
+  background-color: rgb(226, 8, 0);
+}
+
+.container .delete-all {
+  width: fit-content;
+  margin: 15px auto;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: rgb(255, 8, 0);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  transition: var(--main-transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.container .info {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+
+  /* display: none; */
+}
+
+.container .info .tasks-num span, 
+.container .info .completed span {
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.container .info .tasks-num span {
+  background-color: var(--main-color);
+}
+
+.container .info .completed span {
+  background-color: rgb(0, 138, 0);
+}
