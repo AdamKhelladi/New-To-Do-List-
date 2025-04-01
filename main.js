@@ -79,6 +79,7 @@ function addTasksToPage(arrayOfTasks) {
 
     tasksArea.appendChild(taskDiv);
   });
+  
   showCounts();
 }
 
