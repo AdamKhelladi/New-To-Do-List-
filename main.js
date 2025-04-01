@@ -88,6 +88,7 @@ function addToLocalStorage(arrayOfTasks) {
 
 function getFromLocalStorage() {
   let data = window.localStorage.getItem("tasks");
+  
   if (data) {
     let tasks = JSON.parse(data);
     addTasksToPage(tasks);
