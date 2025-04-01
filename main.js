@@ -2,6 +2,7 @@
 
 let input = document.querySelector(".input");
 let addBtn = document.querySelector(".add");
+
 let tasksArea = document.querySelector(".tasks");
 let deleteAll = document.querySelector(".delete-all");
 
