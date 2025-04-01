@@ -37,6 +37,7 @@ tasksArea.addEventListener("click", (e) => {
     toggleStatusTask(e.target.getAttribute("data-id"));
     e.target.classList.toggle("task-done");
   }
+  
   showCounts();
 });
 
