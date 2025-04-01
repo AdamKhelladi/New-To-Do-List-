@@ -32,6 +32,7 @@ tasksArea.addEventListener("click", (e) => {
     e.target.parentElement.remove();
     deleteFromLocalStorage(e.target.parentElement.getAttribute("data-id"));
   }
+  
   if (e.target.classList.contains("task")) {
     toggleStatusTask(e.target.getAttribute("data-id"));
     e.target.classList.toggle("task-done");
